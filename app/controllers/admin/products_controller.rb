@@ -1,5 +1,9 @@
 class Admin::ProductsController < ApplicationController
 
+  USER_ID, PASSWORD = 'Jungle', 'book'
+  # Require authentication only 
+  before_filter :authenticate, :only => [ :index ]
+
   def index
     @products = Product.order(id: :desc).all
   end
@@ -37,4 +41,12 @@ class Admin::ProductsController < ApplicationController
     )
   end
 
+  private
+  def authenticate
+     authenticate_or_request_with_http_basic do |id, password| 
+        id == USER_ID && password == PASSWORD
+     end
+  end
 end
+
+

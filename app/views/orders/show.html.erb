@@ -6,9 +6,11 @@
  
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
-    <%= render 'order_details' %>
-    <%= render 'email' %>
+    <h5>A confirmation email has been sent to <%= @order.email %></h5>
+  
   </div>
+
+  <%= render 'order_details' %>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 

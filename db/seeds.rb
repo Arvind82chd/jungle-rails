@@ -132,5 +132,28 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+order1 = Order.create({ 
+  total_cents: 323847,
+  stripe_charge_id: 'knkiwebdiubehbiuxbyelhxbwecercrv',
+  email: "abc@gmail.com"
+  
+})
+
+order1.line_items.create({
+  product_id: 1,
+  quantity: 2,
+  item_price_cents: 100000,
+  total_price_cents: 200000
+  
+})
+
+order1.line_items.create({
+  product_id: 2,
+  quantity: 1,
+  item_price_cents: 123847,
+  total_price_cents: 123847
+  
+})
 
 puts "DONE!"
+
