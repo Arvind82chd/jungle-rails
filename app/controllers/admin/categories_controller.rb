@@ -3,7 +3,7 @@ class Admin::CategoriesController < ApplicationController
   USER_ID, PASSWORD = 'Jungle', 'book'
   # Require authentication only 
   before_filter :authenticate, :only => [ :index, :new ]
-
+  
   def index
     @categories = Category.order(id: :desc).all
   end
