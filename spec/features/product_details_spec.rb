@@ -17,6 +17,8 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
       end
     end
   
+
+
   scenario "User clicks on product details" do
 
     # Act
@@ -41,6 +43,8 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     expect(page).to have_css 'section.products-show'
 
   end
+
+  
 
 end
 

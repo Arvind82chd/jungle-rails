@@ -36,7 +36,7 @@ puts "Re-creating Products ..."
 Product.destroy_all
 
 cat1.products.create!({
-  name:  'Men\'s Classy shirt',
+  name:  "Men's Classy shirt",
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel1.jpg'),
   quantity: 10,
@@ -101,7 +101,7 @@ cat2.products.create!({
 })
 
 cat2.products.create!({
-  name:  'World\'s Largest Smartwatch',
+  name:  "World's Largest Smartwatch",
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics3.jpg'),
   quantity: 32,
